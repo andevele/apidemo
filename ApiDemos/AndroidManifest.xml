@@ -2692,6 +2692,15 @@
             </intent-filter>
         </activity>
         <activity
+            android:name=".graphics.CircleOval"
+            android:label="Graphics/CircleOval" >
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.SAMPLE_CODE" />
+            </intent-filter>
+        </activity>
+        <activity
             android:name=".graphics.CompressedTextureActivity"
             android:configChanges="keyboardHidden|orientation|screenLayout|screenSize|smallestScreenSize"
             android:label="Graphics/OpenGL ES/Compressed Texture"
@@ -2910,7 +2919,7 @@
                 <category android:name="android.intent.category.SAMPLE_CODE" />
             </intent-filter>
         </activity>
-                <activity
+        <activity
             android:name=".graphics.Matrixs"
             android:label="Graphics/Matrixs" >
             <intent-filter>
