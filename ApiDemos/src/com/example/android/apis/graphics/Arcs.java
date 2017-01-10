@@ -40,7 +40,7 @@ public class Arcs extends GraphicsActivity {
         private RectF[] mOvals;
         private RectF mBigOval;
         private float mStart;
-        private float mSweep;
+        private float mSweep = 0;
         private int mBigIndex;
 
         private static final float SWEEP_INC = 2;
@@ -73,12 +73,12 @@ public class Arcs extends GraphicsActivity {
             mPaints[3].setColor(0x88888888);
             mUseCenters[3] = true;
 
-            mBigOval = new RectF(40, 10, 280, 250);
+            mBigOval = new RectF(100, 30, 380, 350);
 
-            mOvals[0] = new RectF( 10, 270,  70, 330);
-            mOvals[1] = new RectF( 90, 270, 150, 330);
-            mOvals[2] = new RectF(170, 270, 230, 330);
-            mOvals[3] = new RectF(250, 270, 310, 330);
+            mOvals[0] = new RectF( 420, 30,  900, 350);
+            mOvals[1] = new RectF(100, 380, 400, 600);
+            mOvals[2] = new RectF(420, 380, 930, 600);
+            mOvals[3] = new RectF(100, 640, 600, 900);
 
             mFramePaint = new Paint();
             mFramePaint.setAntiAlias(true);
@@ -105,10 +105,10 @@ public class Arcs extends GraphicsActivity {
             mSweep += SWEEP_INC;
             if (mSweep > 360) {
                 mSweep -= 360;
-                mStart += START_INC;
-                if (mStart >= 360) {
-                    mStart -= 360;
-                }
+//                mStart += START_INC;
+//                if (mStart >= 360) {
+//                    mStart -= 360;
+//                }
                 mBigIndex = (mBigIndex + 1) % mOvals.length;
             }
             invalidate();

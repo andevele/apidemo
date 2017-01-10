@@ -58,6 +58,7 @@ public class CircleOval extends GraphicsActivity {
 			mPaint.setColor(Color.BLUE);
 			canvas.drawOval(fRect, mPaint);
 
+			invalidate();
 		}
 
 	}
